@@ -113,14 +113,7 @@ i{
 }
 @keyframes profile-img {
   from {
-    transform: rotate(0deg);
-    position: relative;
-    right: 500px;
-  }
-  to {
-    position: relative;
-    right: 0px;
-    transform: rotate(360deg);
+    opacity: 0;
   }
 }
 h1 {
@@ -141,7 +134,6 @@ h2 {
 .download-button {
   background-color: rgb(29, 29, 29);
   margin: 5% 3% 5% 0;
-  box-shadow: 5px 10px #888888;
   color: white;
 }
 .navbar-brand {
@@ -216,58 +208,9 @@ p {
 .container {
   padding-top: 2%;
 }
-.feature {
-  color: white;
-  background-color: black;
-  border-radius: 20px;
-}
-
 .contain {
   text-align: center;
   padding: 5%;
-}
-.speaker .feature {
-  align-items: center;
-  text-align: center;
-  border: 5px solid #f6f6f6;
-}
-.speaker .feature:hover {
-  transform: translateY(-10px);
-}
-@media only screen and (max-width: 600px) {
-  .feature {
-    padding: 50%;
-  }
-}
-.speaker-img {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  max-width: 35%;
-  max-height: 45%;
-  border-radius: 50%;
-  border: 2px solid #efefef;
-}
-ul.speaker-social li {
-  list-style: none;
-  display: inline-block;
-  margin: 10px 5px;
-}
-ul.speaker-social li a {
-  font-size: 0.2em;
-  padding: 0 10px;
-}
-ul.speaker-social li a:hover {
-  text-decoration: none;
-}
-a span.ti-facebook {
-  color: #3b5998;
-}
-a span.ti-twitter-alt {
-  color: #4099ff;
-}
-
-.content-ct {
-  text-align: center;
 }
 .row-2 {
   align-items: center;
@@ -438,4 +381,73 @@ td {
 .expand {
   animation: cursorAnim3 .5s forwards;
   border: 2px solid red;
+}
+
+#board{
+  line-height: 0;
+  /* padding-top:5px; */
+  margin-top: 15px;
+  text-align:center;
+}
+#board div{
+  /* background-color: #acc9fc; */
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  cursor: url(img/x.png) 8 8, crosshair;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#t0, #t1, #t3, #t4{
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#t5, #t2{
+  border-bottom: 1px solid black;
+}
+#t6, #t7{
+  border-right: 1px solid black;
+}
+
+.x, .o{
+  cursor: default !important;
+
+}
+.x{
+  background-image: url(../images/x.png);
+}
+.o{
+  background-image: url(../images/o.png);
+}
+
+#title{
+  font-size: 16pt;
+  font-weight: bold;
+}
+#score{
+  text-align: center;
+  margin-top: 20px;
+}
+#score-o,#score-g,#score-w{
+ 
+  display: inline-block;
+}
+
+.label{
+  padding-left: 15%;
+  padding-top: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .label {
+    display: none;
+    visibility: hidden;
+    padding: 0;
+  }
 }
